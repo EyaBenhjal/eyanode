@@ -1,6 +1,7 @@
 const Customer= require('../models/Customer');
 const mongoose = require('mongoose');
 //get home
+
 /*exports.homepage= async (req, res) => {
   const message = await req.consumerF
   const locals={
@@ -65,8 +66,6 @@ console.log(error);
         firstName:req.body.firstName,
         lastName:req.body.lastName,
         details:req.body.details,
-        tel:req.body.tel,
-        email:req.body.email,
 
        });
 

@@ -1,0 +1,64 @@
+<div class="d-flex justify-content-between flex-wrap flex-md nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">Rservation </h1>
+    <div class="btn-toolbar mb-2 mb-md 0">
+      <div class="btn-group me-2">
+        <button class="btn btn-sm btn-outline-secondary">?</button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col py-3">
+    <div class="row">
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="indres">Dashboard Reservation</a></li>
+            <li class="breadcrumb-item active">New reservation</li>
+          </ol>
+        </nav>
+      </div>
+      <div class="col text-end fw-lighter">
+        <b>reservationId</b>
+      </div>
+    </div>
+  
+  </div>
+  
+  
+  <form action="/addr" method="POST">
+  
+    <div class="row form-group mb-4">
+      <div class="col">
+        <label for="Namesalle">Name reservation</label>
+        <input type="text" class="form-control" id="Namesalle" name="Namesalle" value="" placeholder=" Name salle" >
+      </div>
+  
+  
+      <div class="col">
+        <label for="nbreplace">nombre </label>
+        <input type="text" class="form-control" id="nbreplace" name="nbreplace" value="" placeholder="date de reservation" required>
+      </div>
+   
+      <div class="col">
+        <label for="debutres">date debut reservation </label>
+        <input type="datetime-local" class="form-control" id="debutres" name="debutres" value="" placeholder="date debut de reservation" required>
+      </div>
+    
+    <div class="col">
+        <label for="finres">date fin reservation </label>
+        <input type="datetime-local" class="form-control" id="finres" name="finres" value="" placeholder="date fin de reservation" required>
+      </div>
+
+  
+    <div class="form-group mb-4">
+        <label for="details">Salle Details</label>
+        <textarea class="form-control" name="details" id="details" cols="30" rows="12" placeholder="Salle Details"></textarea>
+    </div>
+  
+    <div class="form-group mb-4">
+      <button type="submit" class="btn btn-primary">Add reservation</button>
+    </div>
+  
+    
+  
+  </form>

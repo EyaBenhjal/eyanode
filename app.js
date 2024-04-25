@@ -30,14 +30,16 @@ app.use(
       maxAge:1000 * 60 * 60 * 24 * 7,
     }
   })
-
 )
 app.use(expressLayouts);
 app.set('layout', './layouts/main');
+
 app.set('view engine', 'ejs');
 
 // Routes
 app.use('/', require('./server/routes/customer'));
+app.use('/', require('./server/routes/sal'));
+app.use('/', require('./server/routes/reservation'));
 
 // 404 Not Found Middleware
 app.use((req, res, next) => {
@@ -49,7 +51,7 @@ app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).send('Something went wrong!');
 });
-
 app.listen(port, () => {
   console.log(`App listening on port ${port}`);
 });
+
